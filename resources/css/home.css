@@ -16,7 +16,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 
 
-   }
+}
 
 .navbar {
 
@@ -27,12 +27,8 @@ body {
 
 }
 
-p {
+p {}
 
-
-
-    
-    }
 .btn-wsp {
     position: fixed;
     width: 70px;
