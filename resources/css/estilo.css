@@ -90,6 +90,7 @@ header a:hover{
 
 /*DROPDOWN MENU*/
 .dropdown_menu{
+    
     display: none;
     position: absolute;
     right: 2rem;
@@ -120,12 +121,60 @@ header a:hover{
     justify-content: center;
 }
 
+.line{
+    padding-top: -2%;
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset  400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham5 .top{
+    stroke-dasharray: 40 82;
+}
+
+.ham5 .botton{
+    stroke-dasharray: 40 82;
+}
+
+.ham5.active .top{
+    stroke-dasharray: 14 82;
+    stroke-dashoffset: -72px;
+}
+
+.active .line{
+    stroke: #fff;
+}
+
+.ham5.active .bottom{
+    stroke-dasharray: 14 82;
+    stroke-dashoffset: -72px;
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active{
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active{
+    transform: rotate(180deg);
+}
+
 
 /*RESPONSIVE DESING HEADER*/
 @media(max-width: 992px) {
     header{
-        display: grid;
-        
+
     }
 
     .navbar .links,
@@ -155,7 +204,162 @@ header a:hover{
 
 @media(max-width: 768px){
     .dropdown_menu{
+        
         left: 2rem;
         width: unset;
     }
+}
+
+/*Contenedor register*/
+
+.container{
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*diseño del cuadro de contenido*/
+.wrapper{
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    background-color: rgba(150, 149, 149, 0.5);
+    opacity: .8;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login{
+    display: none;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+/*diseño de los label*/
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 100%;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn:hover{
+    color: orange;
+}
+
+.login-register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 3px;
+
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
 }

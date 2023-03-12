@@ -10,3 +10,7 @@ toggleBtn.onclick = function() {
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars'
 }
+
+function toogle() {
+    document.getElementById('burger').classList.toggle('active')
+}

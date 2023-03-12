@@ -18,8 +18,6 @@
 
 <body>
     <!--Diseño de header-->
-
-
     <header>
         <div class="row">
             <div class="col col-xs-12 col-sm-12  col-md-12 col-lg-12">
@@ -33,7 +31,16 @@
                     </ul>
                     <a href="login.html" class="action_btn"> INICIAR SESION </a>
                     <div class="toggle_btn">
-                        <i class="fa-solid fa-bars"></i>
+                        <svg class="ham  hamRotate180 ham5" id="burger" viewBox="0 0 100 100" width="80" onclick="toogle();">
+                            <path class="line top"
+                            d="m 30,33 h 40 c  0,0 8.5,-0.68551 8.5,10.375 0,-8.292653 
+                            -6.122707,9.002293 -8.5,6.625 l -11.071429"/>
+                            <path  class="line middle"
+                            d="m 70,50  h -40" />
+                            <path class="line bottom"
+                            d="m 30,67 h 40 c  
+                            -6.122707,-9.002293 -8.5,-6.625 l -11.071429"/>
+                        </svg>
                     </div>
                 </div>
                 <div class="dropdown_menu">
@@ -46,15 +53,80 @@
                 <div class="pato">
                 </div>
             </div>
-
         </div>
     </header>
     <!---->
     <!--Contenedor de la página.-->
     <main class="container">
         <div class="row">
-            <div class="col">
-                
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!--Formulario para iniciar sesion-->
+                <div class="wrapper">
+                    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+                    <div class="form-box login">
+                        <h2>Iniciar sesión</h2>
+                        <form action="#">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="mail"></ion-icon>
+                                </span>
+                                <input type="email" required>
+                                <label>Correo</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="password" required>
+                                <label>Contraseña</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> Recordarme</label>
+                                <a href="#">Olvidé mi contraseña</a>
+                            </div>
+                            <button type="submit" class="btn">Ingresar</button>
+                            <div class="login-register">
+                                <p>No posees cuenta?<a href="#" class="register-link"> Registrarme</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--Formulario para registrarse-->
+                    <div class="form-box register">
+                        <h2>Registrarse</h2>
+                        <form action="#">
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="person"></ion-icon>
+                                </span>
+                                <input type="text" required>
+                                <label>Usuario</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="mail"></ion-icon>
+                                </span>
+                                <input type="email" required>
+                                <label>Correo</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon">
+                                    <ion-icon name="lock-closed"></ion-icon>
+                                </span>
+                                <input type="password" required>
+                                <label>Contraseña</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> Estoy de acuerdo con los terminos y condiciones</label>
+                            </div>
+                            <button type="submit" class="btn">Ingresar</button>
+                            <div class="login-register">
+                                <p>No posees cuenta?<a href="#" class="register-link"> Registrarme</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -70,6 +142,8 @@
     <!--Bundle con Popper, archivos js al final para optimiar los tiempos de carga de la página -->
     <script src="/resources/js/bootstrap.bundle.min.js"></script>
     <script src="../../resources/js/iniciofinal.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
