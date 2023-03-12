@@ -9,13 +9,17 @@
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))
 }
 
-
+/*
+Fonts letra de pagina Web
+ */
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 body {
     font-family: 'Open Sans', sans-serif;
 
-
+/*
+Navbar Color
+ */
 }
 
 .navbar {
@@ -60,8 +64,6 @@ p {}
         line-height: 66px;
     }
 }
-
-
 
 
 .weather-card {
