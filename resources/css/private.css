@@ -1,0 +1,85 @@
+/* estilos generales */
+:root {
+    --font-color: #fff;
+    --side-bar-bg-color: #040404;
+    --font-family: sans-serif;
+}
+        /* SIDEBARS */
+/* sidebar inicio  en desktop*/
+/* padre de logo y lista opciones */
+.sidebar-desktop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+ul li{
+    list-style: none;
+}
+.logo-sidebar{
+    position: relative;
+    margin: 17px;
+}
+.lista-opciones{
+    position: relative;
+}
+/* list individual contenedor padre de ( li) */
+.lista{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+/* /*elementos texto (a) */
+li a {
+    font-family: var(--font-color);
+    color: var(--font-color);
+    text-decoration: none;
+}
+/* efecto cristalizado */
+.sidebar-desktop::before {
+    content: "";
+    position: absolute;
+    background-color: var(--side-bar-bg-color);
+    background-image: url(../img/water-mark.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    filter: blur(3px);
+
+}
+/* sidebar desktop fin */
+/* sidebar mobile */
+.sidebar-mobile{
+    background-color: var(--side-bar-bg-color);
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    overflow: scroll;
+    /* si el contenido avarca más espacio, crea un scroll */
+    /* align-items: center; */
+}
+.lista-opciones-mobile{
+    display: flex;
+    /* alinear al centro del contenedor padre*/
+}
+.lista-mobile{
+    /* ordena los elementos en una sola fila */
+    display: flex; 
+    gap: 65px;
+    align-items: center;
+}
+li:last-child{
+    margin-right: 40px;
+}
+/*para hacer la división del sidebar con el contenido del section*/
+.window-container{
+    display: flex;
+    flex-direction: row;
+}

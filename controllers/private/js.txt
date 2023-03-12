@@ -1,1 +1,0 @@
-en está carpeta poner todos los archivos .js de la página privada
