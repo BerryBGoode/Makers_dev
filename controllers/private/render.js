@@ -8,7 +8,7 @@ function reportWindowSize() {
     widthOutput.textContent = window.innerWidth;//está línea detecta el cambio del ancho
     width_move = widthOutput.textContent;//está determina el ancho que tiene, lo almacena, lo compara y luego determina la acción debida
     //si la ventana del navegador tiene menos de 490px (ancho de un mobile), entonces renderizará otro sidebar
-    if (width_move > 490) {
+    if (width_move > 525) {
         sidebar.innerHTML = `<div id="sidebar-contenedor">
     <div class="sidebar-desktop">
         <!--logo del sidebar-->
@@ -19,7 +19,7 @@ function reportWindowSize() {
         <div class="lista-opciones">
             <ul class="lista">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cortes</a></li>
+                <li><a href="#">Servicios</a></li>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Reservaciones</a></li>
                 <li><a href="#">Clientes</a></li>
@@ -32,7 +32,7 @@ function reportWindowSize() {
     </div>            
 </div>`;
     }
-    if (width_move <= 490) {
+    if (width_move <= 525) {
         sidebar.innerHTML = `<div id="sidebar-contenedor">
     <div class="sidebar-mobile">
         <div class="lista-opciones-mobile">
@@ -208,7 +208,7 @@ function reportWindowSize() {
     }
 }
 //si el ancho fijo es mayor a 490 
-if (width > 490) {
+if (width > 525) {
     //insertar sidebar desktop
     sidebar.innerHTML = `<div id="sidebar-contenedor">
     <div class="sidebar-desktop">
@@ -220,7 +220,7 @@ if (width > 490) {
         <div class="lista-opciones">
             <ul class="lista">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cortes</a></li>
+                <li><a href="#">Servicios</a></li>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Reservaciones</a></li>
                 <li><a href="#">Clientes</a></li>
@@ -233,7 +233,7 @@ if (width > 490) {
     </div>            
 </div>`;
 }
-if (width <= 490) {
+if (width <= 525) {
     //insertar sidebar mobile 
     sidebar.innerHTML = `<div id="sidebar-contenedor">
     <div class="sidebar-mobile">
@@ -409,3 +409,14 @@ if (width <= 490) {
 }
 window.onresize = reportWindowSize;//cuando cambie el size de la ventan, va hacer igual al valor que tiene este método
 
+const search_input = document.getElementById('render-search');
+search_input.innerHTML = `<div id="search-container">
+<svg class="icon" width="15" height="15" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M12.5263 21.5122C18.3398 21.5122 23.0526 17.1442 23.0526 11.7561C23.0526 6.36795 18.3398 2 12.5263 2C6.71279 2 2 6.36795 2 11.7561C2 17.1442 6.71279 21.5122 12.5263 21.5122Z"
+        stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M27 27.0001L21.7368 22.1221" stroke="white" stroke-width="4" stroke-linecap="round"
+        stroke-linejoin="round" />
+</svg>
+<input type="text" placeholder="Buscar">
+</div>`;
