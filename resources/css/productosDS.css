@@ -1,0 +1,38 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #ffffff;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.navbar {
+
+
+    background-color: rgba(25, 25, 25);
+
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: rgba(57, 53, 52, 1);
+    border-color: #f7f8f8
+}
+
+.btn-primary:hover {
+    background-color: #393534;
+    border-color: #8ad3d3
+}
+
