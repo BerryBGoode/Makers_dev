@@ -7,261 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--libreria de Bootstrap -->
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../resources/css/bootstrap.min.css" rel="stylesheet">
     <!--icono del titulo-->
-    <link rel="shortcut icon" href="/resources/img/logo_blanco_nav.png" type="image/x-icon">
-    <!--Dirección Css-->
-    <link rel="stylesheet" href="/resources/css/Reservación.css">
-
+    <link rel="shortcut icon" href="../../resources/img/logo_blanco_nav.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../resources/css/estilo.css">
+    <title>Makers</title>
 </head>
 <!--contenido visual-->
 
 <body>
+    <!--render header-->
+    <header id="render-header" class="render-header-reservarciones"></header>
 
-    <!-- Inicio Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown link
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Final Navbar -->
-
-
-
-
-
-
-    <!-- Forrulario Reserva -->
-    <div class="form-body">
-        <!-- Columna de row -->
-        <div class="row">
-            <div class="form-holder">
-                <!-- Formulario contenido columna -->
-                <div class="form-content">
-                    <div class="form-items">
-                        <!-- Imagen-->
-                        <h3> <img src="/resources/img/barber-shop-svgrepo-com.svg " width="50px"> Local de San Salvador
-                        </h3>
-                        <form class="requires-validation" novalidate>
-                            <div class="col-md-12">
-                                <!-- Ficha Formulario-->
-                                <p>Fecha:</p>
-                                <select class="form-select mt-3" required>
-                                    <option selected disabled value="">3/6/2023</option>
-                                    <option value="jweb">Junior Web Developer</option>
-                                    <option value="sweb">Senior Web Developer</option>
-                                    <option value="pmanager">Project Manager</option>
-                                </select>
-                                <div class="valid-feedback">You selected a position!</div>
-                                <div class="invalid-feedback">Please select a position!</div>
-                            </div>
-                            <div class="col-md-12">
-                                <p>Hora:</p>
-                                <select class="form-select mt-3" required>
-                                    <option selected disabled value="">8:00 a.m</option>
-                                    <option value="jweb">Junior Web Developer</option>
-                                    <option value="sweb">Senior Web Developer</option>
-                                    <option value="pmanager">Project Manager</option>
-                                </select>
-                                <div class="valid-feedback">You selected a position!</div>
-                                <div class="invalid-feedback">Please select a position!</div>
-                            </div>
-                            <div class="col-md-12">
-                                <p>Barbero:</p>
-                                <select class="form-select mt-3" required>
-                                    <option selected disabled value="">Position</option>
-                                    <option value="jweb">Junior Web Developer</option>
-                                    <option value="sweb">Senior Web Developer</option>
-                                    <option value="pmanager">Project Manager</option>
-                                </select>
-                                <div class="valid-feedback">You selected a position!</div>
-                                <div class="invalid-feedback">Please select a position!</div>
-                            </div>
-                            <hr>
-                            <!--Final ficha Formulario-->
-                            <div class="btn-toolbar text-center well">
-                                <!--Botón-->
-                                <button type="button"
-                                    class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left">
-                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> CONFIRMAR
-                                </button>
-                                <button type="button"
-                                    class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left">
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> CANCELAR
-                                </button>
-                            </div>
-                    </div>
-                    </form>
+    <main>
+        <div class="container form-container">
+            <div class="row form-row">
+                <div class="col-12">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_42_17)">
+                            <path
+                                d="M19.6048 7.3461C20.0574 7.3461 20.4257 6.97784 20.4257 6.5252V4.69555C20.4257 4.24291 20.0574 3.87464 19.6048 3.87464H19.2585C19.1732 2.97001 18.8026 2.11436 18.193 1.4311C18.009 1.22473 17.6924 1.20663 17.4861 1.39079C17.2797 1.57483 17.2617 1.89136 17.4458 2.09772C17.8912 2.59712 18.1702 3.21675 18.2515 3.87464H11.7483C11.9477 2.25763 13.3299 1.00149 15 1.00149C15.2765 1.00149 15.5007 0.777308 15.5007 0.500744C15.5007 0.224239 15.2766 0 15 0C12.7772 0 10.9457 1.70426 10.7419 3.87459H10.3952C9.94257 3.87459 9.57431 4.24285 9.57431 4.69549V6.52508C9.57431 6.97772 9.94257 7.34599 10.3952 7.34599H10.7223V22.6539H10.3952C9.94257 22.6539 9.57431 23.0222 9.57431 23.4748V25.3044C9.57431 25.757 9.94257 26.1253 10.3952 26.1253H10.7419C10.9458 28.2956 12.7773 29.9999 15 29.9999C17.2228 29.9999 19.0543 28.2956 19.2582 26.1253H19.6048C20.0575 26.1253 20.4257 25.757 20.4257 25.3044V23.4748C20.4257 23.0222 20.0575 22.6539 19.6048 22.6539H19.2778V7.3461H19.6048ZM15 28.9987C13.3299 28.9987 11.9477 27.7425 11.7483 26.1255H18.2516C18.0523 27.7425 16.67 28.9987 15 28.9987ZM19.4243 23.6554V25.124H18.777H11.223H10.5756V23.6554H11.223H18.777H19.4243ZM14.8688 8.32187C14.7711 8.06324 14.4823 7.93263 14.2234 8.03042L11.7237 8.97478V7.34604H18.2763V9.86307L11.7237 12.3387V10.0454L14.5774 8.96728C14.8361 8.86949 14.9665 8.58056 14.8688 8.32187ZM18.2763 10.9336V13.2269L11.7237 15.7025V13.4092L18.2763 10.9336ZM18.2763 14.2975V16.5908L11.7237 19.0664V16.7731L18.2763 14.2975ZM18.2763 17.6614V19.9546L15.148 21.1365C14.8893 21.2342 14.7588 21.5232 14.8566 21.7819C14.9323 21.9824 15.1227 22.1058 15.3251 22.1058C15.3838 22.1058 15.4437 22.0953 15.5019 22.0733L18.2762 21.0252V22.6539H11.7237V20.137L18.2763 17.6614ZM18.777 6.34467H11.223H10.5756V4.87607H11.223H18.777H19.4243V6.34467H18.777Z"
+                                fill="#393534" stroke="#393534" stroke-width="0.125" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_42_17">
+                                <rect width="30" height="30" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    Sucursal #1
                 </div>
             </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-    <!-- Footer Inicio -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-
-        <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
-
-            <div class="me-5">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <div>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="text-white me-4">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-
-        </section>
-        <!-- Sección redes sociales -->
-
-        <!-- Sección Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-
-                <div class="row mt-3">
-
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                        <h6 class="text-uppercase fw-bold">Company name</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
-                        <p>
-                            Here you can use rows and columns to organize your footer
-                            content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </p>
+            <div class="row form-row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            Fecha
+                        </div>
+                        <div class="col-12">
+                            <input type="date" name="" id="">
+                        </div>
                     </div>
-
-
-
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">Products</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
-                        <p>
-                            <a href="#!" class="text-white">MDBootstrap</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">MDWordPress</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">BrandFlow</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Bootstrap Angular</a>
-                        </p>
+                    <div class="row">
+                        <div class="col-12">
+                            Hora
+                        </div>
+                        <div class="col-12">
+                            <input type="time" name="" id="">
+                        </div>
                     </div>
-
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">Useful links</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
-                        <p>
-                            <a href="#!" class="text-white">Your Account</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Become an Affiliate</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Shipping Rates</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Help</a>
-                        </p>
+                    <div class="row">
+                        <div class="col-12">
+                            Seleccionar
+                        </div>
+                        <div class="col-12">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Barbero</option>
+                                <option value="1">José Alvarado</option>
+                                <option value="2">Alvaro Lara</option>
+                              </select>
+                        </div>
                     </div>
-
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold">Contact</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-                    </div>
-
                 </div>
+            </div>
+            <div class="row">
 
             </div>
-        </section>
-
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
+    </main>
 
-    </footer>
-    <!-- Footer Final -->
+    <footer></footer>
 
-    </div>
-
-
-
-
-
-
-    <!-- Scripts de la pagina -->
-    <script src="../../resources/js/bootstrap.bundle.min.js"></script>
     <!--Bundle con Popper, archivos js al final para optimiar los tiempos de carga de la página -->
-    <script src="/resources/js/bootstrap.bundle.min.js"></script>
-
-
-
+    <script src="../../resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../../controllers/public/render.js"></script>
+    <script src="../../controllers/public/iniciofinal.js"></script>
 </body>
 
 </html>
