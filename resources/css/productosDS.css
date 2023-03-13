@@ -9,7 +9,7 @@
     background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255))
 }
 
-
+ /*Navbar Fonts */
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
 body {
@@ -17,12 +17,13 @@ body {
 
 
 }
-
+  /*Navbar color */
 .navbar {
 
 
     background-color: rgba(25, 25, 25);
 
+    /* Color botones */
 }
 
 .btn-primary {
