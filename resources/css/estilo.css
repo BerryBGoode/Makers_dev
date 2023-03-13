@@ -256,7 +256,7 @@ header a:hover{
 }
 
 .wrapper .form-box.login{
-    transition: transform .18s ease;
+    transition: transform 1s ease;
     transform: translateX(0);
 }
 
@@ -273,7 +273,7 @@ header a:hover{
 }
 
 .wrapper.active .form-box.register{
-    transition: transform .18s ease;
+    transition: transform 1s ease;
     transform: translateX(0);
 }
 
