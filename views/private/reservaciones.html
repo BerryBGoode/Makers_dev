@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--libreria de Bootstrap -->
+    <link href="../../resources/css/bootstrap.min.css" rel="stylesheet">
+    <!--icono del titulo-->
+    <link rel="shortcut icon" href="../../resources/img/logo_blanco_nav.png" type="image/x-icon">
+    <!--archivo css-->
+    <link rel="stylesheet" href="../../resources/css/private.css">
+    <title>Makers</title>
+</head>
+<!--contenido visual-->
+
+<body>
+
+    <main class="window-container">
+        <aside>
+            <!--sidebar mobile y desktop renderizado-->
+            <div id="render-sidebar"></div>
+        </aside>
+        <!--contenedor del section, abarca buscador, y dashboard o inicio-->
+        <div class="container">
+            <!-- contenedor para renderizar el buscador -->
+            <div class="row parent-search" id="render-search">
+                <span id="width"></span>
+            </div>
+            <!--contendor catalogo-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="container parent-container">
+                        <!-- header de la página catalogo -->
+                        <div class="row header-catalog">
+                            <!-- titulo -->
+                            <div class="col-6">
+                                <span class="title">
+                                    RESERVACIONES
+                                </span>
+                            </div>
+                            <!-- botones -->
+                            <div class="col-6 btn-container" id="render-buttons"></div>
+                        </div>
+                        <!-- cards con la info de la base -->
+                        <div class="row cards-main">
+                            <!-- apartir de aquí se cargan los servicios -->
+                            <div class="services">
+                                <div class="row cards-container">
+                                    <div class="col-5">
+                                        <div class="row card-product">
+                                            <!-- carga nombre servicio, descripción servicio, precio servicio -->
+                                            <div class="col-12">
+                                                <span>José Roberto Mendez</span>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>con: Mateo Siguenza</p>
+                                            </div>
+                                            <div class="row buttons-price">
+                                                <div class="col-6">
+                                                    <span>12/4/2023</span>
+                                                    <span>10:30 a.m</span>
+                                                </div>
+                                                <div class="col-6 modify-delete">
+                                                    <!-- actualizar -->
+                                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                        data-bs-toggle="modal" data-bs-target="#update-modal"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11.25 27.5H18.75C25 27.5 27.5 25 27.5 18.75V11.25C27.5 5 25 2.5 18.75 2.5H11.25C5 2.5 2.5 5 2.5 11.25V18.75C2.5 25 5 27.5 11.25 27.5Z"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M16.5428 7.56518L7.7958 16.6861C7.46279 17.0334 7.12978 17.7163 7.06318 18.214L6.58587 21.698C6.40826 22.9597 7.26299 23.8394 8.47292 23.6658L11.8141 23.1681C12.2803 23.0986 12.9352 22.7514 13.2794 22.4041L22.0264 13.2831C23.536 11.709 24.2465 9.88015 22.0264 7.56518C19.8063 5.25021 18.0525 5.991 16.5428 7.56518Z"
+                                                            stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M15.2885 8.87305C16.0322 11.6394 18.108 13.8039 20.7721 14.591"
+                                                            stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <!-- eliminar -->
+                                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11.25 27.5H18.75C25 27.5 27.5 25 27.5 18.75V11.25C27.5 5 25 2.5 18.75 2.5H11.25C5 2.5 2.5 5 2.5 11.25V18.75C2.5 25 5 27.5 11.25 27.5Z"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M23 9.58184C20.04 9.28484 17.0622 9.13184 14.0933 9.13184C12.3333 9.13184 10.5733 9.22184 8.81333 9.40184L7 9.58184"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M11.8889 8.673L12.0844 7.494C12.2266 6.639 12.3333 6 13.8355 6H16.1644C17.6666 6 17.7822 6.675 17.9155 7.503L18.1111 8.673"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M21.0889 12.4258L20.5111 21.4888C20.4133 22.9018 20.3333 23.9998 17.8533 23.9998H12.1467C9.66669 23.9998 9.58669 22.9018 9.48891 21.4888L8.91113 12.4258"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="row card-product">
+                                            <!-- carga nombre servicio, descripción servicio, precio servicio -->
+                                            <div class="col-12">
+                                                <span>Marcos Lara</span>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>con: Roberto Siguenza</p>
+                                            </div>
+                                            <div class="row buttons-price">
+                                                <div class="col-6">
+                                                    <span>12/5/2023</span>
+                                                    <span>10:00 p.m</span>
+                                                </div>
+                                                <div class="col-6 modify-delete">
+                                                    <!-- actualizar -->
+                                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                        data-bs-toggle="modal" data-bs-target="#update-modal"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11.25 27.5H18.75C25 27.5 27.5 25 27.5 18.75V11.25C27.5 5 25 2.5 18.75 2.5H11.25C5 2.5 2.5 5 2.5 11.25V18.75C2.5 25 5 27.5 11.25 27.5Z"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M16.5428 7.56518L7.7958 16.6861C7.46279 17.0334 7.12978 17.7163 7.06318 18.214L6.58587 21.698C6.40826 22.9597 7.26299 23.8394 8.47292 23.6658L11.8141 23.1681C12.2803 23.0986 12.9352 22.7514 13.2794 22.4041L22.0264 13.2831C23.536 11.709 24.2465 9.88015 22.0264 7.56518C19.8063 5.25021 18.0525 5.991 16.5428 7.56518Z"
+                                                            stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M15.2885 8.87305C16.0322 11.6394 18.108 13.8039 20.7721 14.591"
+                                                            stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <!-- eliminar -->
+                                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11.25 27.5H18.75C25 27.5 27.5 25 27.5 18.75V11.25C27.5 5 25 2.5 18.75 2.5H11.25C5 2.5 2.5 5 2.5 11.25V18.75C2.5 25 5 27.5 11.25 27.5Z"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M23 9.58184C20.04 9.28484 17.0622 9.13184 14.0933 9.13184C12.3333 9.13184 10.5733 9.22184 8.81333 9.40184L7 9.58184"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M11.8889 8.673L12.0844 7.494C12.2266 6.639 12.3333 6 13.8355 6H16.1644C17.6666 6 17.7822 6.675 17.9155 7.503L18.1111 8.673"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M21.0889 12.4258L20.5111 21.4888C20.4133 22.9018 20.3333 23.9998 17.8533 23.9998H12.1467C9.66669 23.9998 9.58669 22.9018 9.48891 21.4888L8.91113 12.4258"
+                                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--modal agregar-->
+    <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Agregar reservación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- formulario para agregar -->
+                    <form action="">
+                        <div class="container container-form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" placeholder="DUI" name="" id="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Mateo Siguenza</option>
+                                        <option value="2">Roberto Siguenza</option>
+                                        <option value="3">Alex López</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="datetime-local" class="form-control" name="" id="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="waves-effect btn-trigger btn" data-bs-dismiss="modal">Cerrar</a>
+                    <a href="" class="waves-effect btn-trigger btn">Guardar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal actualizar -->
+    <div class="modal fade" id="update-modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Cambiar servicio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="container container-form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="text" placeholder="DUI" name="" id="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Mateo Siguenza</option>
+                                        <option value="2">Roberto Siguenza</option>
+                                        <option value="3">Alex López</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="datetime-local" class="form-control" name="" id="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="" class="waves-effect btn-trigger btn" data-bs-dismiss="modal">Cerrar</a>
+                    <a href="" class="waves-effect btn-trigger btn">Guardar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Bundle con Popper, archivos js al final para optimiar los tiempos de carga de la página -->
+    <script src="../../resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../../controllers/private/render.js"></script>
+</body>
+
+</html>

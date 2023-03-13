@@ -14,14 +14,16 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 35px;
-    height: 100%;
+    /* gap: 35px; */
+    height: 100vh;
 }
+
 /*para el que sidebar utilize el 100% del alto*/
-#render-sidebar{
+#render-sidebar {
     height: 100%;
 }
-#sidebar-contenedor{
+
+#sidebar-contenedor {
     height: 100%;
 }
 
@@ -137,19 +139,64 @@ input[placeholder="Buscar"] {
     cursor: pointer;
 }
 
+/*inputs sin bordes*/
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #424242;
+    outline: none;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+input[type="number"] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #424242;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.price-exist {
+    flex-direction: column;
+    gap: 25px;
+}
+
+.price>.price-container>input[placeholder="precio"] {
+    width: 98%;
+}
+
+/*modal form*/
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 /*contenedor padre o "parent-container"*/
 .parent-container {
-    margin: 15px 1px 1px 1px;
+    color: var(--font-color);
+    margin: 15px 1px 0 1px;
     background: rgba(4, 4, 4, 0.58);
     border-radius: 15px;
 
-    
+    /**/
     display: grid;
     gap: 25px;
 }
 
 /*inicio*/
-
+.graphs-container{
+    height: 92vh;
+    overflow: scroll;
+}
 /* estos valores van a cambiar después */
 .graph-container {
     color: var(--font-color);
@@ -166,6 +213,76 @@ input[placeholder="Buscar"] {
 }
 
 /* fin de anuncio xd */
+
+/*titulo en páginas catalogo*/
+span.title {
+    font-weight: bold;
+    font-size: large;
+}
+
+.header-catalog {
+    align-items: center;
+}
+
+/*botones*/
+a.btn {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: bold;
+
+    margin-top: 10px;
+    background-color: var(--side-bar-bg-color);
+    border-radius: 10px;
+}
+
+a.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    transition: .3s ease-out;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+
+/*card style*/
+.cards-container {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card-product {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(4, 4, 4, 0.73);
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.buttons-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.modify-delete {
+    display: flex;
+    flex-direction: row;
+}
+
+.services {
+    margin-bottom: 15px;
+}
+.planilla > input{
+    width: 95%;
+}
 /*media para desktop*/
 @media screen and (min-width: 525px) {
 
@@ -192,4 +309,27 @@ input[placeholder="Buscar"] {
         margin-bottom: 20px;
     }
 
+    .modify-delete {
+        flex-direction: row;
+    }
+
+    .buttons-price {
+        flex-direction: row;
+    }
+
+    .price-container {
+        display: block;
+        width: auto;
+    }
+
+    .price-exist {
+        gap: 0;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    a.btn>span {
+        display: none;
+    }
 }
