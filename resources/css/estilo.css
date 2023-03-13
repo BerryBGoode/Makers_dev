@@ -193,6 +193,8 @@ header a:hover{
     .dropdown_menu{
         display: block;
     }
+
+    
 }
 
 @media(max-width: 576px){
@@ -200,6 +202,10 @@ header a:hover{
         left: 2rem;
         width: unset;
     }
+
+    
+
+
 }
 
 @media(max-width: 768px){
@@ -208,12 +214,14 @@ header a:hover{
         left: 2rem;
         width: unset;
     }
+
+    
 }
 
 /*Contenedor register*/
 
 .container{
-    padding-top: 5%;
+    padding-top: 9%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,6 +249,7 @@ header a:hover{
     height: 700px;
 }
 
+/*Diseño, transiciones de login y register*/
 .wrapper .form-box{
     width: 100%;
     padding: 40px;
