@@ -34,7 +34,7 @@ header {
     width: 100vw;
 }
 
-.nav::before{
+.nav::before{/*buscar como posicionar en angulo un contenedor*/
     content: "";
     position: absolute;
     background-color: #20ba5a;
