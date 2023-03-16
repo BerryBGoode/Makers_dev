@@ -26,6 +26,7 @@ function reportWindowSize() {
                 <li><a href="../../views/private/empleados.html">Empleados</a></li>
                 <li><a href="../../views/private/facturas.html">Facturas</a></li>
                 <li><a href="../../views/private/planillas.html">Planillas</a></li>
+                <li><a href="../../views/private/index.html">Cerrar sesión</a></li>
             </ul>
 
         </div>
@@ -221,6 +222,7 @@ if (width > 525) {
                 <li><a href="../../views/private/empleados.html">Empleados</a></li>
                 <li><a href="../../views/private/facturas.html">Facturas</a></li>
                 <li><a href="../../views/private/planillas.html">Planillas</a></li>
+                <li><a href="../../views/private/index.html">Cerrar sesión</a></li>
             </ul>
         </div>
     </div>            

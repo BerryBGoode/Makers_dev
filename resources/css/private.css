@@ -5,7 +5,9 @@
     --font-family: sans-serif;
     --container-color: #393534;
 }
-
+.body{
+    overflow: hidden;
+}
 /* SIDEBARS */
 /* sidebar inicio  en desktop*/
 /* padre de logo y lista opciones */
@@ -195,7 +197,8 @@ input[type="number"] {
 /*inicio*/
 .graphs-container{
     height: 92vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: clip;
 }
 /* estos valores van a cambiar después */
 .graph-container {
@@ -264,7 +267,8 @@ a.waves-effect {
     flex-wrap: wrap;
     background-color: rgba(4, 4, 4, 0.73);
     border-radius: 10px;
-    overflow: scroll;
+    /* overflow: scroll; */
+
 }
 
 .buttons-price {
