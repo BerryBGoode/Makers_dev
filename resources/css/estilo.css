@@ -28,21 +28,35 @@ header {
     list-style: none;
 }
 
+.opciones{
+    display: flex;
+    gap: 13vw;
+}
+
+.opciones ol{
+    display: flex;
+    gap: 5vw;
+}
 .nav{
     background-color: #393534;
     position: fixed;
+    height: 23%;
     width: 100vw;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav::before{/*buscar como posicionar en angulo un contenedor*/
     content: "";
+    left: -2px;
     position: absolute;
-    background-color: #20ba5a;
-    z-index: 1;
-    height: 10%;
-    width: 100vw;
-    border-radius: 0 0 0 10px;
-    top: 100%;
+    background-color: #393534;
+    z-index: -1;
+    height: 70%;
+    width: 101vw;
+    border-radius: 0 0 0 50px;
+    top: 65%;
+    transform: rotate(-5deg);
 }
 /*end test*/
 .pato {
