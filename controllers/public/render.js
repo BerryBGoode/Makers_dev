@@ -1,40 +1,41 @@
 const header = document.getElementById('render-header');
-if (header !== null) {
-    header.innerHTML = `<div class="navbar">
-                <!--Logo y links que redireccionan a las otras páginas web-->
-                <div class="logo">
-                    <a href="#"><img src="../../resources/img/logo_blanco.png" alt="" /></a>
-                </div>
-                <ul class="links">
-                    <li><a href="../../views/public/index.html">INICIO</a></li>
-                    <li><a href="../../views/public/reservacion.html">RERSERVAS</a></li>
-                    <li><a href="../../views/public/productos.html">PORDUCTOS</a></li>
-                    <li><a href="../../views/public/servicios.html">SERVICIOS</a></li>
-                </ul>
-                <a href="login.html" class="action_btn"> INICIAR SESION </a>
-                <div class="toggle_btn">
-                    <svg class="ham hamRotate180 ham5" id="burger" viewBox="0 0 100 100" width="80"
-                        onclick="toogle();">
-                        <path class="line top" d="m 30,33 h 40 c  0,0 8.5,-0.68551 8.5,10.375 0,-8.292653 
-                        -6.122707,9.002293 -8.5,6.625 l -11.071429" />
-                        <path class="line middle" d="m 70,50  h -40" />
-                        <path class="line bottom" d="m 30,67 h 40 c  
+header.innerHTML = `<div class="row">
+    <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="navbar">
+            <!--Logo y links que redireccionan a las otras páginas web-->
+            <div class="logo">
+                <a href="#"><img src="../../resources/img/logo_blanco.png" alt="" /></a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="reservacion.html">RERSERVAS</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+            </ul>
+            <a href="login.html" class="action_btn"> INICIAR SESION </a>
+            <div class="toggle_btn">
+                <svg class="ham hamRotate180 ham5" id="burger" viewBox="0 0 100 100" width="80" onclick="toogle();">
+                    <path class="line top"/>
+                    <path class="line middle" d="m 70,50  h -40" />
+                    <path class="line bottom" d="m 30,67 h 40 c  
                         -6.122707,-9.002293 -8.5,-6.625 l -11.071429" />
-                    </svg>
-                </div>
+                </svg>
             </div>
-            <!--Menú burger para dispositivos pequeños-->
-            <div class="dropdown_menu">
-                <li><a href="../../views/public/index.html">INICIO</a></li>
-                <li><a href="../../views/public/reservacion.html">RERSERVAS</a></li>
-                <li><a href="../../views/public/productos.html">PORDUCTOS</a></li>
-                <li><a href="../../views/public/servicios.html">SERVICIOS</a></li>
-                <li>
-                    <a href="../../views/public/login.html" class="action_btn"> INICIAR SESION </a>
-                </li>
-            </div>
-    <div class="pato"></div>`;
-}
+        </div>
+        <!--Menú burger para dispositivos pequeños-->
+        <div class="dropdown_menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="reservacion.html">RERSERVAS</a></li>
+            <li><a href="productos.html">PRODUCTOS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li>
+                <a href="login.html" class="action_btn"> INICIAR SESION </a>
+            </li>
+        </div>
+        <div class="pato"></div>
+    </div>
+</div>`;
+
 
 const footer = document.querySelector('footer');
 if (footer !== null) {

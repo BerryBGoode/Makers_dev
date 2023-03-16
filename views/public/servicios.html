@@ -10,16 +10,16 @@
     <link href="../../resources/css/bootstrap.min.css" rel="stylesheet">
     <!--icono del titulo-->
     <link rel="shortcut icon" href="../../resources/img/logo_blanco_nav.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../resources/css/servicios_productos.css">
+    <link rel="stylesheet" href="../../resources/css/estilo.css">
     <title>Makers</title>
 </head>
 <!--contenido visual-->
 
 <body>
     <!-- Menu y encabezado del sitio-->
-    <header></header>
+    <header id="render-header"></header>
     <!-- Cuerpo del documento -->
-    <main class="container">
+    <main class="container container-servicios">
         <!-- breaks dobles para imitar figma-->
         <br>
         <br>
@@ -286,12 +286,14 @@
                 <div class="row justify-content-evenly">
                     <div class="col-sm-4">
                         <div class="container text-center bg-light">
-                            <p class="text-start"> Local de San Salvador  <a href="reservacion.html" class="btn btn-dark ms-5">Reservar</a></p>
+                            <p class="text-start"> Local de San Salvador <a href="reservacion.html"
+                                    class="btn btn-dark ms-5">Reservar</a></p>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="container text-center bg-light">
-                            <p class="text-start"> Local de Santa Tecla <a href="reservacion.html" class="btn btn-dark ms-5">Reservar</a></p>
+                            <p class="text-start"> Local de Santa Tecla <a href="reservacion.html"
+                                    class="btn btn-dark ms-5">Reservar</a></p>
                         </div>
                     </div>
                 </div>
@@ -305,6 +307,8 @@
     <script src="../../resources/js/jquery-3.6.4.min.js"></script>
     <script src="../../resources/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../../controllers/public/servicios.js"></script>
+    <script src="../../controllers/public/iniciofinal.js"></script>
+    <script src="../../controllers/public/render.js"></script>
 </body>
 
 </html>

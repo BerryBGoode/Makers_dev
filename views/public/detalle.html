@@ -1,25 +1,28 @@
 <!doctype html>
-<html lang="en" lang="es">
+<html lang="es">
 
 <head>
-
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--libreria de Bootstrap -->
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
-    <!--icono del titulo-->
+    <!-- Bootstrap CSS -->
+    <link href="../../resources/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../resources/css/estilo.css">
+    <!--icono del navegador-->
     <link rel="shortcut icon" href="../../resources/img/logo_blanco_nav.png" type="image/x-icon">
     <title>Makers</title>
 </head>
-<!--contenido visual-->
 
 <body>
+    <!--contenido renderizado (header), !importante id="render-header"-->
+    <header id="render-header"></header>
 
 
-
-    <!--Bundle con Popper, archivos js al final para optimiar los tiempos de carga de la página -->
-    <script src="/resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../../resources/js/bootstrap.bundle.min.js"></script>
+    <script src="../../controllers/public/iniciofinal.js"></script>
+    <script src="../../controllers/public/render.js"></script>
 </body>
 
 </html>
