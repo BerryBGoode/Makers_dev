@@ -9,7 +9,7 @@
     <!--libreria de Bootstrap -->
     <link href="../../resources/css/bootstrap.min.css" rel="stylesheet">
     <!--icono del titulo-->
-    <link rel="shortcut icon" href="../../resources/img/logo_blanco_nav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../resources/img/logos/logo_blanco_nav.png" type="image/x-icon">
     <!--archivo css-->
     <link rel="stylesheet" href="../../resources/css/private.css">
     <title>Makers</title>
@@ -21,12 +21,13 @@
     <main class="window-container">
         <aside>
             <!--sidebar mobile y desktop renderizado-->
-            <div id="render-sidebar"></div>
+            <div id="sidebar" class="container-sidebar"></div>
+            
         </aside>
         <!--contenedor del section, abarca buscador, y dashboard o inicio-->
-        <div class="container">            
+        <section class="container">
             <!-- contenedor para renderizar el buscador -->
-            <div class="row parent-search" id="render-search">                
+            <div class="row parent-search" id="render-search">
                 <span id="width"></span>
             </div>
             <div class="row">
@@ -40,7 +41,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!--Bundle con Popper, archivos js al final para optimiar los tiempos de carga de la página -->
