@@ -4,10 +4,14 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 /*modificar el overflow-x hidden para que no exista un scroll y desbordamiento*/
-body{
+body {
     overflow-x: hidden;
 }
+/*body cuando este activo el menu hamburguesa mobile del sitio public*/
+.responsive-menu-active{opacity: .2; transition: all .8s ease-out;}
+
 /*HEADER*/
 header {
     width: 100%;
@@ -19,15 +23,20 @@ header {
     background-attachment: fixed;
     font-family: 'SansSerifBldFLF';
 }
+
 /*test de header manual*/
-.header-test{
+.header-test {
     overflow: hidden;
 }
-.opciones li > a, .opciones a{
+
+.opciones li>a,
+.opciones a {
     color: #FFF;
     text-decoration: none;
+    font-weight: bold;
 }
-.opciones li{
+
+.opciones li {
     list-style: none;
     height: 6vh;
     width: 8vw;
@@ -37,30 +46,44 @@ header {
     justify-content: center;
 }
 
-.iniciar-sesion{
+.iniciar-sesion {
     height: 6vh;
-    width: 10vw;
+    width: 12vw;
     border-radius: 10px;
     background-color: #B5B1B0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.iniciar-sesion svg{
+    cursor: pointer;
 }
 
-.opciones li:hover{
+.iniciar-sesion a{
+    display: none;
+}
+/*media en tablet +*/
+@media screen and (min-width: 900px){
+    .iniciar-sesion a{
+        display: block;
+    }
+}
+.opciones li:hover {
     background-color: #231F1E;
     transition: linear;
 }
-.opciones{
+
+.opciones {
     display: flex;
     gap: 13vw;
 }
 
-.opciones ol{
+.opciones ol {
     display: flex;
     gap: 5vw;
 }
-.nav{
+
+.nav {
     background-color: #393534;
     position: fixed;
     height: 23%;
@@ -70,32 +93,104 @@ header {
     align-items: center;
 }
 
+/***** menu hamburgesa animado, utilizado cuando width sea menor a 532px *****/
+.menu-hamburguesa{
+    display: flex;
+    flex-direction: column;
+    width: 7%;
+    height: auto;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
+}
 
-.curva{/*buscar como posicionar en angulo un contenedor*/
+.menu-hamburguesa > span{
+    background: #fff;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.menu-hamburguesa-active span:first-child{
+    transform: rotate(45deg);
+}
+
+.menu-hamburguesa-active span:nth-child(2){
+    opacity: 0;
+}
+
+.menu-hamburguesa-active span:last-child{
+    transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 532px){
+    .menu-hamburguesa{
+        display: none;
+    }
+}
+/***** End menu hamburgesa animado, utilizado cuando width sea menor a 532px *****/
+
+/* curva */
+.nav::before {
+    /*buscar como posicionar en angulo un contenedor*/
     content: "";
     left: -21px;
     position: absolute;
     background-color: #393534;
     z-index: -1;
-    height: 17%;
-    width: 102vw;
-    border-radius: 0 0 0 103px;
-    top: 10%;
+    height: 33%;
+    width: 103vw;
+    top: 82%;
     transform: rotate(-2deg);
 
 }
+/***** media screen mobile para la las lista o menú *****/
+@media screen and (max-width: 532px) {
+    .ol-list{
+        position: fixed;
+        top: -100%;
+        background: #393534;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        transition: all .9s ease-out;
+        align-items: center;
+        left: 0;
+    }
+
+    .ol-list-active{
+        top: 22%;       
+    }
+}
+/***** End media screen mobile para la las lista o menú *****/
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.title-content span{font-weight: bold;}
+.title-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*end test*/
 /* test del footer manual */
-.footer{
+.footer {
     background: #231F1E;
     height: 10%;
     width: 100vw;
     position: absolute;
-    bottom: 0;
     color: #fff;
     font: bold;
     display: grid;
     place-content: center;
+}
+
+.footer-svg{
+    width: 100vw;
 }
 
 header li {
@@ -156,6 +251,7 @@ header a {
 
 .action_btn:active {
     scale: 0.95;
+    
 }
 
 /*DROPDOWN MENU*/
@@ -169,6 +265,7 @@ header a {
     width: 300px;
     background-color: #393534;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -185,8 +282,8 @@ input[type=time] {
     font-weight: 400;
     padding: .375rem 2.25rem .375rem .75rem;
     line-height: 1.5;
-    color: #212529 background-color: #fff;
-    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+    color: #212529;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position: right .75rem center;
     background-size: 16px 12px;
@@ -274,7 +371,6 @@ input[type=time] {
 
 /*RESPONSIVE DESING HEADER*/
 @media(max-width: 992px) {
-    header {}
 
     .navbar .links,
     .navbar .action_btn {
@@ -286,7 +382,7 @@ input[type=time] {
         display: block;
     }
 
-    .navbar .logo {}
+
 
     .dropdown_menu {
         display: block;
@@ -539,7 +635,7 @@ Navbar Color
 /*
 Boton de Api whasapp
  */
-p {}
+
 
 .btn-wsp {
     position: fixed;
@@ -975,18 +1071,21 @@ body {
 
 }
 
-#render-header{
+#render-header {
     height: 10vh;
 }
-.text-center{
+
+.text-center {
     /* padding: 0; */
 }
-.text-start{
+
+.text-start {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.container-servicios{
+
+.container-servicios {
     flex-direction: column;
 }
 
@@ -1081,7 +1180,8 @@ body {
         height: 17em;
     }
 }
-.container-main{
+
+.container-main {
     display: flex;
     flex-direction: column;
 }
